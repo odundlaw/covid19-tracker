@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Aux from "../../Auxilliary/aux";
+import Aux from "../../wrapper/aux";
 import InfoBox from "../../components/InfoBox/InfoBox";
 import Map from "../Map/Map";
 import Table from "../Table/Table";
@@ -96,7 +96,7 @@ const FullPage = () => {
           {/* box for status */}
 
           <InfoBox
-            active={(caseType === "cases")}
+            active={caseType === "cases"}
             isRed
             clicked={(e) => setCaseType("cases")}
             title="Corona Virus Cases"
@@ -104,14 +104,14 @@ const FullPage = () => {
             total={countryInfo.cases}
           />
           <InfoBox
-            active={(caseType === "recovered")}
+            active={caseType === "recovered"}
             clicked={(e) => setCaseType("recovered")}
             title="Recovered"
             cases={countryInfo.todayRecovered}
             total={countryInfo.recovered}
           />
           <InfoBox
-            active={(caseType === "deaths")}
+            active={caseType === "deaths"}
             isRed
             clicked={(e) => setCaseType("deaths")}
             title="Deaths"
