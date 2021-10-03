@@ -1,38 +1,127 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  background-color: rgb(247, 247, 247);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App{
   display: flex;
-  flex-direction: column;
+  justify-content: space-evenly;
+  padding:20px;
+}
+
+.app__left {
+  flex: 0.9;
+  
+}
+.app__header {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  margin-bottom:20px;
+}
+.app__title {
+  color:#cc1034;
+}
+.app__stats {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  width:100%;
+  flex-direction: row !important;
 }
 
-.App-link {
-  color: #61dafb;
+@media(max-width:990px){
+  .App {
+    flex-direction:column;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.table {
+  height: 400px;
+  overflow: scroll;
+  padding:5px;
+  margin-top:20px;
+  color: #6a5d5d;
+}
+.table tr:hover {
+	background: rgba(0, 0, 0, 0.1)
+}
+.table tr {
+  display: flex;
+  justify-content: space-between;
+  -webkit-transition: background 0.3s, box-shadow 0.3s;
+	-moz-transition: background 0.3s, box-shadow 0.3s;
+  transition: background 0.3s, box-shadow 0.3s;
+  border-bottom:1px solid rgb(211, 210, 210);
+}
+
+.table td {
+	padding: 0.7em 1em 0.7em 1.15em;
+	text-shadow: 0 0 1px rgba(255, 255, 255, 0.1);
+	font-size: 0.8em
+}
+.table tr:nth-of-type(odd) {
+  background-color: #f3f2f8;
+}
+
+.map {
+  height: 500px;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 20px;
+  margin-top: 16px;
+  box-shadow: 0 0 8px -4px rgba(0, 0, 0, 0.5);
+}
+
+.map .leaflet-container{
+  height:100%;
+  border-radius:5px;
+}
+
+
+.info-flag img {
+  width: 100px;
+  border-radius:5px;
+}
+
+.info-flag {
+  height:80px;
+  width:100%;
+  background-size:cover;
+  border-radius:5px;
+}
+
+.info-container{
+  width:150px;
+}
+
+.info-name{
+  font-size: 20px;
+  font-weight:bold;
+  color: #555;
+}
+
+.info-confirmed,
+.info-recovered,
+.info-deaths{
+  font-size:16px;
+  margin-top:5px;
+}
+
+.app__dropdown {
+  background-color: #fff;
+}
+
+.world-wide-cases, 
+.cases-by-country{
+  text-align:center;
+}
+.world-wide-cases{
+  margin-top:20px;
+}
+.lineGraph{
+  margin-top:20px;
 }

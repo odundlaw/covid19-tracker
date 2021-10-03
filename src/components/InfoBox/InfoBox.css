@@ -1,0 +1,39 @@
+.infoBox {
+  cursor: pointer;
+  flex:1 !important;
+  -webkit-transition: background 0.3s, box-shadow 0.3s;
+	-moz-transition: background 0.3s, box-shadow 0.3s;
+  transition: background 0.3s, box-shadow 0.3s;
+  border-bottom:1px solid silver;
+  border-radius: 5px 5px 0 0 !important;
+}
+.infoBox:hover {
+	border-bottom:5px solid greenyellow;
+}
+
+.infoBox-selected {
+  border-top:10px solid greenyellow;
+}
+
+.infoBox-isRed {
+  border-top:10px solid #cc1034;
+}
+
+.title-notRed {
+  color:greenyellow
+}
+
+
+.infoBox__cases{
+    color:#cc1034;
+    font-weight:600 !important;
+    font-size:1.75rem !important;
+    margin-bottom:0.5rem !important;
+}
+
+.infoBox__total{
+    color: #6c757d;
+    font-weight:700 !important;
+    font-size: 0.8rem !important;
+    margin-top: 15px !important;
+}
