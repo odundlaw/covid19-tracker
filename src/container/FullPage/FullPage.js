@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Aux from "../../wrapper/aux";
+import Aux from "../../wrapper/wrapper";
 import InfoBox from "../../components/InfoBox/InfoBox";
 import Map from "../Map/Map";
 import Table from "../Table/Table";
